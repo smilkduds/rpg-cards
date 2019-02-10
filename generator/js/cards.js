@@ -304,6 +304,15 @@ function card_element_bullet(params, card_data, options) {
     return result;
 }
 
+function card_element_spelllist(params, card_data, options) {
+	var result = "";
+	result += '<div class="card-element card-property-line">';
+	result += '   <h4 class="card-property-name">&#8226; ' + params[0] + (params[0] != ' ' ? ': ' : '') + '</h4>';
+	result += '   <p class="card-spelllist">' + params[1] + '</p>';
+	result += '</div>';
+	return result;
+}
+
 var card_element_generators = {
     subtitle: card_element_subtitle,
     property: card_element_property,
@@ -323,7 +332,8 @@ var card_element_generators = {
     icon: card_element_inline_icon,
 	source: card_element_source,
 	spelltext: card_element_spell,
-	spellbullet: card_element_spellbullet
+	spellbullet: card_element_spellbullet,
+	spelllist: card_element_spelllist
 };
 
 // ============================================================================

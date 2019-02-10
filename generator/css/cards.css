@@ -226,6 +226,12 @@
     font-size: inherit;
 }
 
+.card-spelllist {
+	display: inline;
+	font-size: inherit;
+	font-style: italic;
+}
+
 .card-fill {flex:1;}
 
 .card-description-line {
