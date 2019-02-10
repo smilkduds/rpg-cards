@@ -198,25 +198,6 @@
 
 }
 
-.card-weapon {
-    width: 100%;
-	table-layout: fixed;
-	color: black;
-}
-
-.card-weapon-name {
-    text-align: left;
-    vertical-align: top;
-    padding: 0;
-}
-
-.card-weapon-cell {
-    text-align: center;
-    vertical-align: center;
-    padding: 0;
-    width: 30px;
-}
-
 .card-source {
 	display: inline;
 	margin-top: 0em;

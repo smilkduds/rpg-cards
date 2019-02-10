@@ -317,27 +317,6 @@ function card_element_spelllist(params, card_data, options) {
 	return result;
 }
 
-function card_element_weapon(params, card_data, options) {
-    var color = card_data_color_front(card_data, options);
-	var name = '<b style="color:' + color + '">' + params[0] + '</b>'
-	if (params[1]) {
-		name += ' (' + params[1] + ')'
-	}
-    var result = "";
-    result += '<table class="card-weapon">';
-    result += '    <tbody>';
-    result += '    <tr>';
-    result += '      <td class="card-weapon-name">' + name + '</td>';
-    result += '      <td class="card-weapon-cell">' + params[2] + '</td>';
-    result += '      <td class="card-weapon-cell">' + params[3] + '</td>';
-    result += '      <td class="card-weapon-cell">' + params[4] + '</td>';
-    result += '      <td class="card-weapon-cell">' + params[5] + '</td>';
-    result += '    </tr>';
-    result += '  </tbody>';
-    result += '</table>';
-    return result;
-}
-
 var card_element_generators = {
     subtitle: card_element_subtitle,
     property: card_element_property,
@@ -358,8 +337,7 @@ var card_element_generators = {
 	source: card_element_source,
 	spelltext: card_element_spell,
 	spellbullet: card_element_spellbullet,
-	spelllist: card_element_spelllist,
-	weapon: card_element_weapon
+	spelllist: card_element_spelllist
 };
 
 // ============================================================================
