@@ -15,7 +15,8 @@ function card_default_options() {
         card_size: "25x35",
         card_count: null,
         icon_inline: true,
-        rounded_corners: true
+        rounded_corners: true,
+		card_spacing: true
     };
 }
 
@@ -444,6 +445,29 @@ function card_pages_split(data, rows, cols) {
     return result;
 }
 
+function card_pages_table(data, rows, cols) {
+    var result = [];
+    var page = [];
+    for (var j = 0; j < data.length; j += 1) {
+        page.push('<table class="scissortable" style="padding-top:30px">');
+        for (var i = 0; i < data[j].length; i += 1) {
+            if ((i % cols) == 0) {
+                page.push('<tr class="scissortable">');
+            }
+            page.push('<td class="scissortable">');
+            page.push(data[j][i]);
+            page.push('</td>');
+            if (((i + 1) % cols) == 0) {
+                page.push('</tr>');
+            }
+        }
+        page.push('</table>');
+        result.push(page);
+        page = [];
+    }
+    return result;
+}
+
 function card_pages_merge(front_pages, back_pages) {
     var result = [];
     for (var i = 0; i < front_pages.length; ++i) {
@@ -558,6 +582,11 @@ function card_pages_generate_html(card_data, options) {
         back_pages = back_pages.map(function (page) {
             return cards_pages_flip_left_right(page, rows, cols);
         });
+
+		if (options.card_spacing) {
+            front_pages = card_pages_table(front_pages, rows, cols);
+            back_pages = card_pages_table(back_pages, rows, cols);
+        }
 
         // Interleave front and back pages so that we can print double-sided
         pages = card_pages_merge(front_pages, back_pages);
