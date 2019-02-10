@@ -280,6 +280,30 @@ function card_element_source(params, card_data, options) {
 	return result;
 }
 
+function card_element_spell(params, card_data, options) {
+    var result = "";
+    result += '<div class="card-element card-description-line">';
+    result += '   <p class="card-spell-text">' + params[0] + '</p>';
+    result += '</div>';
+    return result;
+}
+
+function card_element_spellbullet(params, card_data, options) {
+	var result = "";
+	result += '<ul class="card-element card-spellbullet-line">';
+	result += '   <li class="card-spellbullet">' + params[0] + '</li>';
+	result += '</ul>';
+	return result;
+}
+
+function card_element_bullet(params, card_data, options) {
+    var result = "";
+    result += '<ul class="card-element card-bullet-line">';
+    result += '   <li class="card-bullet">' + params[0] + '</li>';
+    result += '</ul>';
+    return result;
+}
+
 var card_element_generators = {
     subtitle: card_element_subtitle,
     property: card_element_property,
@@ -297,7 +321,9 @@ var card_element_generators = {
     disabled: card_element_empty,
     picture: card_element_picture,
     icon: card_element_inline_icon,
-	source: card_element_source
+	source: card_element_source,
+	spelltext: card_element_spell,
+	spellbullet: card_element_spellbullet
 };
 
 // ============================================================================

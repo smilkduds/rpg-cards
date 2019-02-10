@@ -206,6 +206,26 @@
 	font-style: italic;
 }
 
+.card-spell-text {
+	display: inline;
+	font-size: .8em;
+}
+
+.card-spellbullet-line {
+    font-size: .8em;
+    color: black;
+    padding-left: 16px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.card-spellbullet {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: inherit;
+}
+
 .card-fill {flex:1;}
 
 .card-description-line {
@@ -242,6 +262,7 @@
 
 .card-stats {
     width: 100%
+	border-spacing: 0;
 }
 
 .card-stats-header {
