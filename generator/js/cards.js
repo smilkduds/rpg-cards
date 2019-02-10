@@ -267,6 +267,19 @@ function card_element_empty(params, card_data, options) {
     return '';
 }
 
+function card_element_source(params, card_data, options) {
+	var result = "";
+	result += '<div>';
+	result += '   <p class="card-source">' + params[0] + '</p>';
+	if (params[1]) {
+		result += '   <div style="float:right">';
+		result += '       <p class="card-source">' + params[1] + '</p>';
+		result += '   </div>';
+	}
+	result += '</div>';
+	return result;
+}
+
 var card_element_generators = {
     subtitle: card_element_subtitle,
     property: card_element_property,
@@ -283,7 +296,8 @@ var card_element_generators = {
     section: card_element_section,
     disabled: card_element_empty,
     picture: card_element_picture,
-    icon: card_element_inline_icon
+    icon: card_element_inline_icon,
+	source: card_element_source
 };
 
 // ============================================================================

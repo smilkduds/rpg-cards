@@ -197,6 +197,15 @@
 
 }
 
+.card-source {
+	display: inline;
+	margin-top: 0em;
+	line-height: 5pt;
+	font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+	font-size: 5pt;
+	font-style: italic;
+}
+
 .card-fill {flex:1;}
 
 .card-description-line {
