@@ -91,7 +91,7 @@ function card_element_title(card_data, options) {
 }
 
 function card_element_icon(card_data, options) {
-    var icon = card_data_icon_front(card_data, options);
+    var icons = card_data_icon_front(card_data, options).split(',');
     var classname = "icon";
     if (options.icon_inline) {
         classname = "inlineicon";
@@ -99,8 +99,10 @@ function card_element_icon(card_data, options) {
 
     var result = "";
     result += '<div class="card-title-' + classname + '-container">';
-    result += '    <div class="card-title-' + classname + ' icon-' + icon + '">';
-    result += '    </div>';
+    for (var i = 0; i < icons.length; i++) {
+		result += '   <div class="card-title-' + classname + ' icon-' + icons[i] + '">';
+		result += '   </div>';
+	}
     result += '</div>';
     return result;
 }
