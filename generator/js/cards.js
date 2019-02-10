@@ -317,6 +317,16 @@ function card_element_spelllist(params, card_data, options) {
 	return result;
 }
 
+function card_element_olist(params, card_data, options) {
+	var result = "";
+	result += '<ol class="card-element card-bullet-line">';
+	for (var i = 0; i < params.length; i++) {
+		result += '<li class="card-bullet">' + params[i] + '</li>';
+	}
+	result += '</ol>';
+	return result;
+}
+
 var card_element_generators = {
     subtitle: card_element_subtitle,
     property: card_element_property,
@@ -337,7 +347,8 @@ var card_element_generators = {
 	source: card_element_source,
 	spelltext: card_element_spell,
 	spellbullet: card_element_spellbullet,
-	spelllist: card_element_spelllist
+	spelllist: card_element_spelllist,
+	list: card_element_olist
 };
 
 // ============================================================================
