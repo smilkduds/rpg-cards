@@ -232,6 +232,24 @@
 	font-style: italic;
 }
 
+.card-spelldesc-line {
+    margin-top: .5em;
+    margin-bottom: 0;
+    font-size: .8em;
+    color: black;
+}
+.card-spelldesc-name {
+    display: inline;
+    font-size: inherit;
+    font-style: italic;
+}
+.card-spelldesc-name::after {
+    content: ".";
+}
+.card-spelldesc-text {
+    display: inline;
+}
+
 .card-fill {flex:1;}
 
 .card-description-line {
