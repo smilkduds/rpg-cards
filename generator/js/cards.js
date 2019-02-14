@@ -348,7 +348,8 @@ var card_element_generators = {
 	spelltext: card_element_spell,
 	spellbullet: card_element_spellbullet,
 	spelllist: card_element_spelllist,
-	list: card_element_olist
+    list: card_element_olist
+    // need to add feature for spell descriptions
 };
 
 // ============================================================================
