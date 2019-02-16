@@ -200,7 +200,6 @@
 
 .card-source {
 	display: inline;
-	margin-top: 0em;
 	line-height: 5pt;
 	font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
 	font-size: 5pt;
@@ -241,6 +240,23 @@
 	font-style: italic;
 }
 
+.card-spelldesc-line {
+    margin-top: .5em;
+    margin-bottom: 0;
+    font-size: .8em;
+    color: black;
+}
+.card-spelldesc-name {
+    display: inline;
+    font-size: inherit;
+    font-style: italic;
+}
+.card-spelldesc-name::after {
+    content: ".";
+}
+.card-spelldesc-text {
+    display: inline;
+}
 
 .card-fill {flex:1;}
 
@@ -271,8 +287,6 @@
 
 .card-box {
     display: inline;
-    height: 10mm;
-    width: 10mm;
     margin-right: 0.3em;
 }
 
