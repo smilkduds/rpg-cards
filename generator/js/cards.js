@@ -286,8 +286,8 @@ function card_element_source(params, card_data, options) {
 
 function card_element_spell(params, card_data, options) {
     var result = "";
-    result += '<div class="card-element card-description-line">';
-    result += '   <p class="card-spell-text">' + params[0] + '</p>';
+    result += '<div class="card-element card-spell-line">';
+    result += '   <p class="card-p card-spell-text">' + params[0] + '</p>';
     result += '</div>';
     return result;
 }
